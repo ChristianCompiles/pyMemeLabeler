@@ -1,0 +1,16 @@
+name: my-python-tools-env  # Name of your environment
+channels:
+  - defaults  # Conda's default channel
+  - conda-forge  # Conda-forge channel for more packages
+dependencies:
+  - python=3.11  # Specify your desired Python version
+  - pip  # Ensure pip is installed for using pip tools
+  - mypy  # Type checking tool
+  - pylint  # Python linter
+  - black  # Python code formatter
+  - isort  # Python import sorter
+  - pipreqs  # Automatically generate requirements.txt
+  - pytesseract  # OCR tool for text extraction from images
+  - tqdm  # Progress bar library
+  - pip:
+    - isort  # Ensure the latest version of isort is installed via pip if needed

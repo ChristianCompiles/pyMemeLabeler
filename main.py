@@ -171,7 +171,7 @@ def main() -> None:
     
     parser = argparse.ArgumentParser(description="Rename image files based on their content using OCR")
     parser.add_argument("directory", help="Directory containing the images")
-    parser.add_argument("--process-all", action="store_true", dest="skip_existing",
+    parser.add_argument("--skip-existing", action="store_true", dest="skip_existing",
                        help="Process all files, including those starting with '_'")
     parser.add_argument("--verbose", action="store_true", dest="verbose",
                        help="All verbosity or nothing?")

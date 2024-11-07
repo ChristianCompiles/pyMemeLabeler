@@ -82,7 +82,7 @@ class ImageRenamer:
         """Extract text from an image using OCR."""
         try:
             with Image.open(image_path) as img:
-                text = pytesseract.image_to_string(img, lang='eng')
+                text = pytesseract.image_to_string(img, config='-c tessedit_char_blacklist=0123456789', lang='eng')
                 return text.strip() if text else None
         except Exception as e:
             logging.error(f"Error extracting text from {image_path}: {e}")
